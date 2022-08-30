@@ -18,7 +18,6 @@
 
 <script setup>
 import { computed, reactive, toRef, defineProps } from 'vue';
-import bus from '@/libs/bus';
 const props = defineProps({
     searchedList: Array,
     delList: Function
@@ -37,7 +36,6 @@ const hasSelected = computed(() => state.selectedRowKeys.length > 0);
 const deleteItem = (selectedRowKeys) => {
     props.delList(selectedRowKeys)
     state.selectedRowKeys = [];
-    bus.emit('deleteItem')
 };
 
 const onSelectChange = (selectedRowKeys) => {
