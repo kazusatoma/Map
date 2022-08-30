@@ -1,6 +1,6 @@
 <template>
     <div style="padding: 20px; margin-left:10% ;">
-        <a-button style="margin-right: 15px;" @click="getGeoLocation">Current coordinate</a-button>
+        <a-button style="margin-right: 15px;" @click="getGeoLocation">Get current location</a-button>
         <span v-show="coords">Your current location is : {{ coords.latitude }},{{ coords.longitude }}</span>
     </div>
 </template>

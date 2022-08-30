@@ -37,6 +37,9 @@ const props = defineProps({
 
 //Handle search
 const handleSearch = () => {
+  if(searching.value === ''){
+    message.warning("Location cannot be blank")
+  }
   //get coordinates by user entered location name from google geocode API
   axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${searching.value}&key=${google_api_key}`)
     .then((res) => {
@@ -54,7 +57,7 @@ const handleSearch = () => {
         searching.value = ''
       }
       else{
-        message.error("Cannot find this location")
+        message.warning("Cannot find this location")
       }
     })
 }

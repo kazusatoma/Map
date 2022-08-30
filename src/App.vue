@@ -2,8 +2,8 @@
   <div class="container">
     <GeoLocator></GeoLocator>
     <SearchMap :addList="addList" :searchedList="searchedList"></SearchMap>
-    <SearchHistory :searchedList="searchedList" :delList="delList"></SearchHistory>
     <LocalTimer :searchedList="searchedList"></LocalTimer>
+    <SearchHistory :searchedList="searchedList" :delList="delList"></SearchHistory>
   </div>
 </template>
 

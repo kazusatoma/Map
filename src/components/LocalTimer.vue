@@ -51,7 +51,7 @@ watch(localTimeZone, () => {
 
 <style scoped>
 footer {
-    margin-top: 20px;
+    margin: 30px;
     text-align: center;
 }
 </style>
